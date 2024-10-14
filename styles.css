@@ -1,0 +1,46 @@
+* {
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.container {
+    width: 1000px;
+    height: 1000px;
+    /* border: 2px solid black; */
+    color: #fff;
+    display: flex;
+    flex-direction: row; /* Main Axis is set here. Default: Row */
+    justify-content: flex-start; /* Aligns on Main Axis */
+    align-items: center; /* Aligns on Cross Axis */
+    /* flex-wrap: wrap; */
+    /* align-content: space-evenly; Doesn't work without wrap value. Aligns items on the Cross Axis similar to justify-content property */
+    /* gap: 2em; */
+
+}
+
+.item {
+    background-color: brown;
+    width: 150px;   
+    height: 150px;
+    border: 2px solid blue;
+}
+
+.item-1 {
+    /* flex-grow: 1;
+    flex-shrink: 2;
+    flex-basis: 200px; */
+    flex: 1; /* Mostly only flex property is required to set all three of them*/
+}
+
+.item-2 {
+    align-self: flex-end; /* Sets the alignment of the individual item's on Cross Axis. This overrides the align-items property value provided in the parent flex container */
+    flex: 1;
+}
+
+.item-3 {
+    flex: 0.5;
+    order: -1; /* Default order of all items is 0. So inputting -1 or 1 can place the item before or after the 0 order itmes */
+}
